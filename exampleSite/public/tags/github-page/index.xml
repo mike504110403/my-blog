@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GitHub page on A-Ze&#39;s Blog</title>
+    <link>https://mike504110403.github.io/tags/github-page/</link>
+    <description>Recent content in GitHub page on A-Ze&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sun, 25 Jul 2021 15:46:47 +0800</lastBuildDate><atom:link href="https://mike504110403.github.io/tags/github-page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>免費個人網站架設--利用 Hugo &amp; GitHub Page</title>
+      <link>https://mike504110403.github.io/blog/post-1/</link>
+      <pubDate>Sun, 25 Jul 2021 15:46:47 +0800</pubDate>
+      
+      <guid>https://mike504110403.github.io/blog/post-1/</guid>
+      <description>在程式領域中，以Github和個人Blog紀錄所學是十分常見的。對於剛踏入這個領域的我而言，一個能夠快速架站的Hugo非常合我的胃口。
+以下為我認為符合我需求的幾個理由: 方便且快速 Hugo官網有提供他人所製作的主題，可以依個人喜好下載後再做修改，省下相當多時間，同時也降低了製作門檻。
+官方文件清楚 若想製作符合自己需求的網頁版型，可以在官網查詢相對應的功能該如何撰寫，並適時補足html的基礎，對於網頁開發的初學者相對友善。
+免費 這個應該不用多說了XD
+關於架設的步驟，小弟這邊就不獻醜了，大家可以參考以下文章:
+為了 SEO！我離開了 Medium，改在 GitHub 上自架個人網站</description>
+    </item>
+    
+  </channel>
+</rss>

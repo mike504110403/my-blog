@@ -1,3 +1,28 @@
+---
+title: "免費個人網站架設--利用 Hugo & GitHub Page"
+date: 2021-07-25T15:46:47+08:00
+draft: true  # 是否為草稿?
+
+# post thumb 標題圖片
+image: "images/post/logo.jpg"
+
+# meta description
+description: "記錄我的第一個Blog的製作過程~"
+
+# taxonomies
+categories: 
+  - "Experience sharing"
+tags:
+  - "Web Frame"
+  - "GitHub page"
+
+# post type
+type: "post"
+---
+
+
+
+
 內文
 
 換行需空一行
@@ -44,3 +69,12 @@ print("hello world")
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
+
+也可以使用shortcode插入社群，直接在此頁面點取
+
+youtube 放youtube id
+{{< youtube id="w7Ft2ymGmfc" autoplay="true" >}}
+
+tweet 
+{{< tweet 877500564405444608 hidecaption >}}
+

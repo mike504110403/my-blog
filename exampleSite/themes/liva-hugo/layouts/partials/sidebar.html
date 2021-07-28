@@ -8,8 +8,8 @@
       <img src="{{ .Params.Image | absURL }}" alt=""
         class="img-fluid author-thumb-sm d-block mx-auto rounded-circle mb-4">
       {{ end }}
-      <p>{{ .Summary }}</p>
-      <a href="{{ .Permalink }}" class="btn btn-outline-primary">Know More</a>
+      <p>{{ .Description }}</p>
+      <a href="{{ .Permalink }}" class="btn btn-outline-primary">More</a>
       {{ end }}
     </div>
     <!-- category -->
@@ -50,9 +50,22 @@
         {{ end }}
       </ul>
     </div>
-    <!-- advertisement -->
+    <!-- contact --><!--
+    <div class="widget">
+      <h4 class="widget-title">Email</h4>
+      <h6>mike504110403@gmail.com</h6>
+      <ul class="list-inline contact-links">
+        {{ range .Site.Params.contact }}
+        <li class="list-inline-item"><a href="{{ .link | safeURL }}"><i class="{{ .icon }}"></i></a></li>
+        {{ end }}
+      </ul>
+    </div>-->
+
+    <!-- advertisement 
     <div class="widget">
       <img src="{{`images/promotion.png` | absURL}}" alt="" class="img-fluid">
-    </div>
+    </div> -->
+
+    
   </div>
 </div>

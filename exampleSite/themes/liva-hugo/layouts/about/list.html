@@ -11,11 +11,76 @@
         <div class="content">
           {{ .Content }}
         </div>
+
+        <!--增加timeline-->
+        <h4 class="widget-title">Experience</h4>
+        <ul class="timeline">
+          <!-- Item 1 
+          <li>
+            <div class="direction-r">
+              <div class="flag-wrapper">
+                <span class="hexa"></span>
+                <!-- <span class="flag">Lorem ipsum.</span> 
+                <span class="time-wrapper"><span class="time">July. 2021</span></span>
+              </div>
+              <div class="desc"><h5>Software QA Engineer</h5><br>Located at Taichung, Taiwan</div>
+            </div>
+          </li>-->
+        
+          <!-- Item 2 -->
+          <li>
+            <div class="direction-l">
+              <div class="flag-wrapper">
+                <span class="hexa"></span>
+                <!-- <span class="flag">Lorem ipsum Anim.</span> -->
+                <span class="time-wrapper"><span class="time">Mar. 2021 - Jun. 2021</span></span>
+              </div>
+              <div class="desc"><h5>PCB CQA Engineer</h5><br>Located at Taoyuan, Taiwan</div>
+            </div>
+          </li>
+        
+          <!-- Item 3 -->
+          <li>
+            <div class="direction-r">
+              <div class="flag-wrapper">
+                <span class="hexa"></span>
+                <!-- <span class="flag">Lorem Occaecat.</span> -->
+                <span class="time-wrapper"><span class="time">Spec. 2020 - Dec. 2020</span></span>
+              </div>
+              <div class="desc"><h5>Software CS</h5><br>Located at Taichung, Taiwan</div>
+            </div>
+          </li>
+
+          <!-- Item 2 
+          <li>
+            <div class="direction-l">
+              <div class="flag-wrapper">
+                <span class="hexa"></span>
+                     <span class="flag">Lorem ipsum Anim.</span> 
+                <span class="time-wrapper"><span class="time">Mar. 2021 - July 2021</span></span>
+              </div>
+              <div class="desc"><h5>PCB CQA Engineer</h5><br>Located at Taoyuan, Taiwan</div>
+            </div>
+          </li> -->
+        </ul>
+        
+        <h4 class="widget-title">Skill Set</h4>
+        <u1 class='data-skill'>
+          <div class="bar learning" data-skill="HTML"></div>
+          <div class="bar learning" data-skill="CSS"></div>
+          <div class="bar back basic" data-skill="Git"></div>
+          <div class="bar back basic" data-skill="Mysql"></div>
+          <div class="bar back intermediate" data-skill="C++"></div>
+          <div class="bar back intermediate" data-skill="Python"></div>
+          <!-- <div class="bar front advanced" data-skill="CSS3"></div> -->
+          <!-- <div class="bar front expert" data-skill="HTML5"></div> -->
+        </u1>
       </div>
     </div>
   </div>
 </section>
 
+<!--相簿功能
 {{ if .Site.Data.gallery.enable }}
 {{ with .Site.Data.gallery }}
 <section>
@@ -35,5 +100,6 @@
 </section>
 {{ end }}
 {{ end }}
+-->
 
 {{ end }}

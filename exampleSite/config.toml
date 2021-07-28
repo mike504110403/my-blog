@@ -5,7 +5,7 @@ title = "A-Ze's Blog"
 theme = "liva-hugo"
 summaryLength = "10"
 paginate = 6
-disqusShortname = ""
+disqusShortname = "post-commit"  # 評論功能
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
@@ -50,10 +50,15 @@ disqusShortname = ""
   weight = 1
 
 
+  [[menu.main]]
+  name = "Post"
+  URL = "blog"
+  weight = 2
+
   #[[menu.main]]
-  #name = "Post"
-  #URL = "blog"
-  #weight = 2
+  #name = "Project"
+  #URL = "project"
+  #weight = 3
 
   #[[menu.main]]
   #name = "Contact"
@@ -61,10 +66,10 @@ disqusShortname = ""
   #weight = 3
 
   # footer menu
-  [[menu.footer]]
-  name = "About"
-  URL = "about"
-  weight = 1
+  #[[menu.footer]]
+  #name = "About"
+  #URL = "about"
+  #weight = 1
 
   #[[menu.footer]]
   #name = "Post"
@@ -79,13 +84,13 @@ disqusShortname = ""
 
 #################### default parameters ################################
 [params]
-#logo = "images/logo.jpg"
+logo = "images/logo2.jpg"
 home = "Home"
 # Meta data
 description = "A-Ze's experience sharing."
 author = "A-Ze"
 # Google Analitycs
-googleAnalitycsID = "Your ID"
+googleAnalitycsID = "UA-203157302-1"  # GA設定ID填寫
 # Contact Information
 mobile = "0919806XXX"
 email = "mike504110403@gmail.com"
@@ -126,10 +131,10 @@ expire_days = 2
 #icon = "ti-twitter-alt" # themify icon : https://themify.me/themify-icons
 #link = "#"
 
-#[[params.social]]
-#title = "instagram"
-#icon = "ti-instagram" # themify icon : https://themify.me/themify-icons
-#link = "#"
+[[params.social]]
+title = "instagram"
+icon = "ti-instagram" # themify icon : https://themify.me/themify-icons
+link = "https://www.instagram.com/az06_6/"
 
 [[params.social]]
 title = "github"
@@ -140,3 +145,12 @@ link = "https://github.com/mike504110403"
 #title = "linkedin"
 #icon = "ti-linkedin" # themify icon : https://themify.me/themify-icons
 #link = "#"
+
+[[params.contact]]
+title = "email"
+
+#ignoreErrors = ["error-missing-instagram-accesstoken"]
+
+[markup]
+  [markup.highlight]
+    style = "abap"

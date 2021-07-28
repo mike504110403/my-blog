@@ -1,167 +1,71 @@
 ---
-title: "How To Use Checklists To Improve Your UX"
-date: 2019-10-29T10:07:47+06:00
-draft: false
+title: "免費個人網站架設--利用 Hugo & GitHub Page"
+date: 2021-07-25T15:46:47+08:00
+draft: false  # 是否為草稿?
 
-# post thumb
-image: "images/featured-post/post-1.jpg"
+# post thumb 標題圖片
+#image: "images/post/logo.jpg"
 
 # meta description
-description: "this is meta description"
+description: "記錄我的第一個Blog的製作過程~"
 
 # taxonomies
-categories:
-  - "Android And Gaming"
+categories: 
+  - "Experience sharing"
 tags:
-  - "Photos"
-  - "Game"
-  - "React"
-  - "Python"
-  - "New"
+  - "Web Frame"
+  - "GitHub page"
 
 # post type
-type: "featured"
+type: "post"
 ---
 
-# Heading 1
-## Heading 2
-### Heading 3
-#### Heading 4
-##### Heading 5
-###### Heading 6
-
-<hr>
-
-##### Emphasis
-
-Emphasis, aka italics, with *asterisks* or _underscores_.
-
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
-
-Combined emphasis with **asterisks and _underscores_**.
-
-Strikethrough uses two tildes. ~~Scratch this.~~
-
-<hr>
-
-##### Link
-[I'm an inline-style link](https://www.google.com)
-
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
-
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
-
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
-
-[You can use numbers for reference-style link definitions][1]
-
-Or leave it empty and use the [link text itself].
-
-URLs and URLs in angle brackets will automatically get turned into links.
-http://www.example.com or <http://www.example.com> and sometimes
-example.com (but not on Github, for example).
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
-
-<hr>
-
-##### Paragraph
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus, facilis placeat pariatur! Voluptatem, sed harum pariatur adipisci voluptates voluptatum cumque, porro sint minima similique magni perferendis fuga! Optio vel ipsum excepturi tempore reiciendis id quidem? Vel in, doloribus debitis nesciunt fugit sequi magnam accusantium modi neque quis, vitae velit, pariatur harum autem a! Velit impedit atque maiores animi possimus asperiores natus repellendus excepturi sint architecto eligendi non, omnis nihil. Facilis, doloremque illum. Fugit optio laborum minus debitis natus illo perspiciatis corporis voluptatum rerum laboriosam.
-
-<hr>
-
-##### List
-
-1. List item
-2. List item
-3. List item
-4. List item
-5. List item
-
-##### Unordered List
-
-* List item
-* List item
-* List item
-* List item
-* List item
-
-<hr>
-
-##### Code and Syntax Highlighting
-
-Inline `code` has `back-ticks around` it.
-
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
-
-```python
-s = "Python syntax highlighting"
-print s
-```
-
-```
-No language indicated, so no syntax highlighting.
-But let's throw in a <b>tag</b>.
-```
-
-<hr>
-
-##### Blockquote
-
-> This is a blockquote example.
-
-<hr>
-
-##### Inline HTML
-
-You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
-
-<dl>
-  <dt>Definition list</dt>
-  <dd>Is something people use sometimes.</dd>
-
-  <dt>Markdown in HTML</dt>
-  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
-</dl>
+在程式領域中，以Github和個人Blog紀錄所學是十分常見的。對於剛踏入這個領域的我而言，一個能夠快速架站的Hugo非常合我的胃口。
 
 
-<hr>
 
-##### Tables
+#### 以下為我認為符合我需求的幾個理由:
 
-Colons can be used to align columns.
+###### **方便且快速** 
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+   Hugo官網有提供他人所製作的主題，可以依個人喜好下載後再做修改，省下相當多時間，同時也降低了製作門檻。   
 
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the
-raw Markdown line up prettily. You can also use inline Markdown.
+###### **官方文件清楚** 
 
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
+   若想製作符合自己需求的網頁版型，可以在官網查詢相對應的功能該如何撰寫，並適時補足html的基礎，對於網頁開發的初學者相對友善。
 
-<hr>
+###### **免費**
 
-##### Image
+   這個應該不用多說了XD
 
-![image](../../images/post/post-1.jpg)
 
-<hr>
+關於架設的步驟，小弟這邊就不獻醜了，大家可以參考以下文章:
 
-##### Youtube video
+[為了 SEO！我離開了 Medium，改在 GitHub 上自架個人網站](https://kucw.github.io/blog/2021/1/from-medium-to-github/)
 
-{{< youtube C0DPdy98e4c >}}
+
+實際上這個網站跟文章也是依照上列文章作者'Kucw'在Hahow上的課程一步步實作出來的。以下就暫且依照實作步驟分享實作心得:
+
+##### **一、 環境建置及主題下載**
+
+要使用Hugo及Github pages架設網站，首先創建Github帳號，並前往[Hugo](https://github.com/gohugoio/hugo/releases)下載並安裝與個人電腦對應的版本，解壓縮後拖曳出'exampleSite'資料夾，再將其他資料夾放入'exampleSite'資料夾，並於內新增一個'themes'資料夾。
+
+同時下載自己喜歡的[主題](https://themes.gohugo.io/)
+'themes'資料夾。值得一提的是，不同的主題所支援的功能可能會有差異，不熟悉html的讀者需多加注意，或是可以依照官方文件的提示加入對應的功能。
+
+##### **二、 個人化設定**
+
+針對資料夾內的'config.toml'編輯，修改對應的編碼，存檔後於'cmd'內執行`hugo server`，個人網站即在locall host運行了。不過目前只在個人的電腦上運行，其他人仍無法看到。
+
+##### **三、 與他人分享個人網站**
+
+在完成個人網站能成功顯示後，我們於'cmd'執行`hugo`，即可獲取此網站的程式碼資料，該資料會存在'public'資料夾。
+
+將該資料夾上傳至Github轉成個人網站。這裡需特別注意，若要使用Github pages轉換網站，repo有限制的格式，須為'帳號.github.io'。
+
+#### **總結**
+
+Hugo為十分方便的架站工具，大部分的操作經過一兩次就能熟悉，html門檻也相對較低，不過若想透過Hugo建立個人風格強烈的網站，仍需摸索。
+
+作為踏入這個領域的第一步，在撰寫這篇文章的同時，本人尚未深入學習html，希望能隨著學習的過程慢慢補足。
+

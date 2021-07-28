@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Flask on A-Ze&#39;s Blog</title>
+    <link>https://mike504110403.github.io/tags/flask/</link>
+    <description>Recent content in Flask on A-Ze&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Wed, 28 Jul 2021 15:46:47 +0800</lastBuildDate><atom:link href="https://mike504110403.github.io/tags/flask/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MVC網頁框架--利用Flask具功能的微型網頁</title>
+      <link>https://mike504110403.github.io/blog/post-2/</link>
+      <pubDate>Wed, 28 Jul 2021 15:46:47 +0800</pubDate>
+      
+      <guid>https://mike504110403.github.io/blog/post-2/</guid>
+      <description>此篇文章為線上課程Django + Flask 雙框架實戰的Flask部分實作心得。
+Flask為Python的網頁框架，能夠連結資料庫快速建立靜態網頁。
+所謂&amp;quot;MVC&amp;quot;即為: Model、Views、Controller，將網頁的不同階段整合並分類於不同的檔案及資料夾，因此更方便於協作及管理。
+以下為MVC架構的概念:  Model &amp;ndash; 負責與資料庫溝通 View &amp;ndash; 處理有關顯示的部分 Controller &amp;ndash; 邏輯處理(路由、顯示、計算)  實作上的基本流程如下: 照官方說明安裝Flask後，建立虛擬環境並建立MVC對應資料夾，如圖:</description>
+    </item>
+    
+  </channel>
+</rss>

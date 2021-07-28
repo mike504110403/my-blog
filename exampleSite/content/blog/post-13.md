@@ -1,7 +1,7 @@
 ---
 title: "How To Use Checklists To Improve Your UX"
 date: 2019-10-29T10:07:47+06:00
-draft: false
+draft: true
 
 # post thumb
 image: "images/post/post-3.jpg"
@@ -12,12 +12,8 @@ description: "this is meta description"
 # taxonomies
 categories: 
   - "Go Language"
-tags:
-  - "Photos"
-  - "Game"
-  - "HTML"
-  - "Python"
-  - "New"
+#tags:
+  -
 
 # post type
 type: "post"
@@ -101,12 +97,12 @@ Inline `code` has `back-ticks around` it.
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
- 
+
 ```python
 s = "Python syntax highlighting"
 print s
 ```
- 
+
 ```
 No language indicated, so no syntax highlighting. 
 But let's throw in a <b>tag</b>.

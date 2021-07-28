@@ -1,168 +1,77 @@
 ---
-title: "How To Use Checklists To Improve Your UX"
-date: 2019-10-29T10:07:47+06:00
-draft: false
+title: "MVC網頁框架--利用Flask具功能的微型網頁"
+date: 2021-07-28T15:46:47+08:00
+draft: false  # 是否為草稿?
 
-# post thumb
-image: "images/featured-post/post-2.jpg"
+# post thumb 標題圖片
+#image: "images/post/logo.jpg"
 
 # meta description
-description: "this is meta description"
+description: "紀錄python的flask套件及MVC框架概念的學習"
 
 # taxonomies
 categories: 
-  - "HTML & CSS"
+  - "Experience sharing"
+  
 tags:
-  - "Photos"
-  - "Game"
-  - "React"
+  - "Web Frame"
+  - "Flask"
   - "Python"
-  - "New"
+  
 
 # post type
-type: "featured"
+type: "post"
 ---
 
-# Heading 1
-## Heading 2
-### Heading 3
-#### Heading 4
-##### Heading 5
-###### Heading 6
+此篇文章為線上課程[Django + Flask 雙框架實戰](https://hiskio.com/courses/373/about)的Flask部分實作心得。
 
-<hr>
+Flask為Python的網頁框架，能夠連結資料庫快速建立靜態網頁。
 
-##### Emphasis
+所謂"MVC"即為: Model、Views、Controller，將網頁的不同階段整合並分類於不同的檔案及資料夾，因此更方便於協作及管理。
 
-Emphasis, aka italics, with *asterisks* or _underscores_.
+#### **以下為MVC架構的概念:**
 
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
+* Model -- 負責與資料庫溝通
+* View -- 處理有關顯示的部分
+* Controller -- 邏輯處理(路由、顯示、計算)
 
-Combined emphasis with **asterisks and _underscores_**.
+#### **實作上的基本流程如下:**
 
-Strikethrough uses two tildes. ~~Scratch this.~~
+照官方說明安裝[Flask](https://flask.palletsprojects.com/en/2.0.x/installation/)後，建立虛擬環境並建立MVC對應資料夾，如圖:
 
-<hr>
+![](/images/flask1.jpg)
 
-##### Link
-[I'm an inline-style link](https://www.google.com)
+"App"指的是應用程式，指的是此次架的Flask網頁，其下有"models"用於存放與功能模塊的py檔，"views"存放的為控制如何顯示的py檔，而"templates"存放views所顯示的所有網頁之html檔。
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+其中，router.py為此App的Controller，主導邏輯處理。
 
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
+我們首先須於router.py中定義路由吉所使用的http協定，並傳至處理顯示的views資料夾中
 
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
-
-[You can use numbers for reference-style link definitions][1]
-
-Or leave it empty and use the [link text itself].
-
-URLs and URLs in angle brackets will automatically get turned into links. 
-http://www.example.com or <http://www.example.com> and sometimes 
-example.com (but not on Github, for example).
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
-
-<hr>
-
-##### Paragraph
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus, facilis placeat pariatur! Voluptatem, sed harum pariatur adipisci voluptates voluptatum cumque, porro sint minima similique magni perferendis fuga! Optio vel ipsum excepturi tempore reiciendis id quidem? Vel in, doloribus debitis nesciunt fugit sequi magnam accusantium modi neque quis, vitae velit, pariatur harum autem a! Velit impedit atque maiores animi possimus asperiores natus repellendus excepturi sint architecto eligendi non, omnis nihil. Facilis, doloremque illum. Fugit optio laborum minus debitis natus illo perspiciatis corporis voluptatum rerum laboriosam.
-
-<hr>
-
-##### List
-
-1. List item
-2. List item
-3. List item
-4. List item
-5. List item
-
-
-##### Unordered List
-
-* List item
-* List item
-* List item
-* List item
-* List item
-
-<hr>
-
-##### Code and Syntax Highlighting
-
-Inline `code` has `back-ticks around` it.
-
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
- 
 ```python
-s = "Python syntax highlighting"
-print s
-```
- 
-```
-No language indicated, so no syntax highlighting. 
-But let's throw in a <b>tag</b>.
+# index page
+@app.route('/', methods=['GET'])  # 使用裝飾器定義路由
+def index():
+    return views.index()  # view去顯示根目錄(於views/user.py內撰寫
 ```
 
-<hr>
+再由views內的function決定如何顯示，這邊我們使用 flask所導入的`render_template`指令使`views.index()`顯示index.html。
 
-##### Blockquote
+```python
+# Render the index page
+class views:
+    def index():
+        return render_template('users/index.html')  # 將template 內的index.html 渲染出來
+```
 
-> This is a blockquote example.
+以上便是flask網頁框架的基本概念，而功能模塊的部分(如資料庫連結、網頁跳轉)等。
 
-<hr>
+即是在models中的py檔進行撰寫，並注意數值及參數地傳出及傳入。
 
-##### Inline HTML
-
-You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
-
-<dl>
-  <dt>Definition list</dt>
-  <dd>Is something people use sometimes.</dd>
-
-  <dt>Markdown in HTML</dt>
-  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
-</dl>
+此篇不詳加介紹，若讀者有興趣，可以參考我的github上關於此次刻成的[實作](https://github.com/mike504110403/flask_demo_git)。
 
 
-<hr>
+#### **總結:**
+flask提供了許多套件簡化了網頁的開發，MVC框架亦讓協作開發的分工與管理更加容易。
 
-##### Tables
+對於要開發簡單功能的靜態網頁而言，實為一個方便的工具，若之後繼續深入摸索，我會再新增文章詳細介紹flask有關的套件。
 
-Colons can be used to align columns.
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the 
-raw Markdown line up prettily. You can also use inline Markdown.
-
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
-
-<hr>
-
-##### Image
-
-![image](../../images/post/post-1.jpg)
-
-<hr>
-
-##### Youtube video
-
-{{< youtube C0DPdy98e4c >}}

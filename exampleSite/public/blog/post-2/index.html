@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-tw"><head>
+  <meta charset="utf-8">
+  <title>A-Ze&#39;s Blog</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="紀錄python的flask套件及MVC框架概念的學習">
+  <meta name="author" content="A-Ze">
+  <meta name="generator" content="Hugo 0.86.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://mike504110403.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://mike504110403.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://mike504110403.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://mike504110403.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://mike504110403.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://mike504110403.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://mike504110403.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-203157302-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://mike504110403.github.io"><img class="img-fluid"
+          src="https://mike504110403.github.io/images/logo2.jpg" alt="A-Ze&#39;s Blog"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.instagram.com/az06_6/"><i class="ti-instagram"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/mike504110403"><i class="ti-github"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://mike504110403.github.io"><img class="img-fluid"
+            src="https://mike504110403.github.io/images/logo2.jpg" alt="A-Ze&#39;s Blog"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://mike504110403.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://mike504110403.github.io/blog">Post</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://mike504110403.github.io/search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 mx-auto">
+        
+        <a href="/categories/experience-sharing"
+          class="text-primary">Experience sharing</a>
+        
+        <h2>MVC網頁框架&ndash;利用Flask具功能的微型網頁</h2>
+        <div class="mb-3 post-meta">
+          <span>By A-Ze</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>28 July 2021</span>
+          
+        </div>
+        
+        <div class="content mb-5">
+          <p>此篇文章為線上課程<a href="https://hiskio.com/courses/373/about">Django + Flask 雙框架實戰</a>的Flask部分實作心得。</p>
+<p>Flask為Python的網頁框架，能夠連結資料庫快速建立靜態網頁。</p>
+<p>所謂&quot;MVC&quot;即為: Model、Views、Controller，將網頁的不同階段整合並分類於不同的檔案及資料夾，因此更方便於協作及管理。</p>
+<h4 id="以下為mvc架構的概念"><strong>以下為MVC架構的概念:</strong></h4>
+<ul>
+<li>Model &ndash; 負責與資料庫溝通</li>
+<li>View &ndash; 處理有關顯示的部分</li>
+<li>Controller &ndash; 邏輯處理(路由、顯示、計算)</li>
+</ul>
+<h4 id="實作上的基本流程如下"><strong>實作上的基本流程如下:</strong></h4>
+<p>照官方說明安裝<a href="https://flask.palletsprojects.com/en/2.0.x/installation/">Flask</a>後，建立虛擬環境並建立MVC對應資料夾，如圖:</p>
+<p><img src="/images/flask1.jpg" alt=""></p>
+<p>&ldquo;App&quot;指的是應用程式，指的是此次架的Flask網頁，其下有&quot;models&quot;用於存放與功能模塊的py檔，&ldquo;views&quot;存放的為控制如何顯示的py檔，而&quot;templates&quot;存放views所顯示的所有網頁之html檔。</p>
+<p>其中，router.py為此App的Controller，主導邏輯處理。</p>
+<p>我們首先須於router.py中定義路由吉所使用的http協定，並傳至處理顯示的views資料夾中</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#888;font-style:italic"># index page</span>
+<span style="color:#000">@app</span>.<span style="color:#000">route</span>(<span style="color:#5a2">&#39;/&#39;</span>, <span style="color:#000">methods</span>=[<span style="color:#5a2">&#39;GET&#39;</span>])  <span style="color:#888;font-style:italic"># 使用裝飾器定義路由</span>
+<span style="color:#00f">def</span> <span style="color:#000">index</span>():
+    <span style="color:#00f">return</span> <span style="color:#000">views</span>.<span style="color:#000">index</span>()  <span style="color:#888;font-style:italic"># view去顯示根目錄(於views/user.py內撰寫</span>
+</code></pre></div><p>再由views內的function決定如何顯示，這邊我們使用 flask所導入的<code>render_template</code>指令使<code>views.index()</code>顯示index.html。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#888;font-style:italic"># Render the index page</span>
+<span style="color:#00f">class</span> <span style="color:#000">views</span>:
+    <span style="color:#00f">def</span> <span style="color:#000">index</span>():
+        <span style="color:#00f">return</span> <span style="color:#000">render_template</span>(<span style="color:#5a2">&#39;users/index.html&#39;</span>)  <span style="color:#888;font-style:italic"># 將template 內的index.html 渲染出來</span>
+</code></pre></div><p>以上便是flask網頁框架的基本概念，而功能模塊的部分(如資料庫連結、網頁跳轉)等。</p>
+<p>即是在models中的py檔進行撰寫，並注意數值及參數地傳出及傳入。</p>
+<p>此篇不詳加介紹，若讀者有興趣，可以參考我的github上關於此次刻成的<a href="https://github.com/mike504110403/flask_demo_git">實作</a>。</p>
+<h4 id="總結"><strong>總結:</strong></h4>
+<p>flask提供了許多套件簡化了網頁的開發，MVC框架亦讓協作開發的分工與管理更加容易。</p>
+<p>對於要開發簡單功能的靜態網頁而言，實為一個方便的工具，若之後繼續深入摸索，我會再新增文章詳細介紹flask有關的套件。</p>
+
+        </div>
+
+        
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "post-commit" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer class="text-capitalize">
+  <div class="container">
+    <div class="row justify-content-center">
+      
+      
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="https://themefisher.com/hugo-themes/">Themefisher</a> All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://mike504110403.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://mike504110403.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://mike504110403.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://mike504110403.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://mike504110403.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://mike504110403.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://mike504110403.github.io/plugins/search/mark.js"></script>
+
+<script src="https://mike504110403.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://mike504110403.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

@@ -227,10 +227,11 @@
   max-width: 165px;
 }
 
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 /* markdown style */
 .content {
   * {
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 20px;
   }
 
@@ -258,7 +259,7 @@
 
       &::before {
         position: absolute;
-        content: "\e71b";
+        content: "➽";
         font-family: $icon-font;
         font-size: 14px;
         left: 0;
