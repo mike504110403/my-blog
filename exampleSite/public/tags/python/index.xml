@@ -6,7 +6,20 @@
     <description>Recent content in Python on A-Ze&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 28 Jul 2021 15:46:47 +0800</lastBuildDate><atom:link href="https://mike504110403.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Jul 2021 15:46:47 +0800</lastBuildDate><atom:link href="https://mike504110403.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>python selenium 設置及基本指令</title>
+      <link>https://mike504110403.github.io/blog/post-3/</link>
+      <pubDate>Fri, 30 Jul 2021 15:46:47 +0800</pubDate>
+      
+      <guid>https://mike504110403.github.io/blog/post-3/</guid>
+      <description>Python的selenium工具提供方便的網頁自動化功能，此篇針對簡易爬蟲的部分記錄。
+安裝及Browser Driver 如同Python的其他工具，selenium也能透過pip套件進行安裝，也可以使用Pycharm內的interpreter新增。
+由於要使用selenium自動開啟瀏覽器，我們還需要下載對應的最新版browser driver至相應的路徑內。
+為了避免繁瑣且須持續更新的下載步驟，這邊我們使用Web Driver Manager工具，可以省下不少工作。
+網頁自動化操作 在selenium中，我們可以必須先引入相關的package以及command，詳細可以參考selenium手冊，例如:</description>
+    </item>
+    
     <item>
       <title>MVC網頁框架--利用Flask具功能的微型網頁</title>
       <link>https://mike504110403.github.io/blog/post-2/</link>

@@ -6,22 +6,40 @@
     <description>Recent content in Tags on A-Ze&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 28 Jul 2021 15:46:47 +0800</lastBuildDate><atom:link href="https://mike504110403.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Jul 2021 15:46:47 +0800</lastBuildDate><atom:link href="https://mike504110403.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python</title>
+      <link>https://mike504110403.github.io/tags/python/</link>
+      <pubDate>Fri, 30 Jul 2021 15:46:47 +0800</pubDate>
+      
+      <guid>https://mike504110403.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>selenium</title>
+      <link>https://mike504110403.github.io/tags/selenium/</link>
+      <pubDate>Fri, 30 Jul 2021 15:46:47 +0800</pubDate>
+      
+      <guid>https://mike504110403.github.io/tags/selenium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web Automation</title>
+      <link>https://mike504110403.github.io/tags/web-automation/</link>
+      <pubDate>Fri, 30 Jul 2021 15:46:47 +0800</pubDate>
+      
+      <guid>https://mike504110403.github.io/tags/web-automation/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Flask</title>
       <link>https://mike504110403.github.io/tags/flask/</link>
       <pubDate>Wed, 28 Jul 2021 15:46:47 +0800</pubDate>
       
       <guid>https://mike504110403.github.io/tags/flask/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://mike504110403.github.io/tags/python/</link>
-      <pubDate>Wed, 28 Jul 2021 15:46:47 +0800</pubDate>
-      
-      <guid>https://mike504110403.github.io/tags/python/</guid>
       <description></description>
     </item>
     

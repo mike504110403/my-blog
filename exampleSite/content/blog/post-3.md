@@ -1,168 +1,111 @@
 ---
-title: "How To Use Checklists To Improve Your UX"
-date: 2019-10-29T10:07:47+06:00
-draft: false
+title: "python selenium 設置及基本指令"
+date: 2021-07-30T15:46:47+08:00
+draft: false  # 是否為草稿?
 
-# post thumb
-image: "images/featured-post/post-3.jpg"
+# post thumb 標題圖片
+#image: "images/post/logo.jpg"
 
 # meta description
-description: "this is meta description"
+description: "使用selenium進行簡單自動化-爬蟲篇"
 
 # taxonomies
 categories: 
-  - "Web Design"
+  - "Experience sharing"
+  
 tags:
-  - "Photos"
-  - "Game"
-  - "React"
+  - "Web Automation"
+  - "selenium"
   - "Python"
-  - "New"
+  
 
 # post type
-type: "featured"
+type: "post"
 ---
 
-# Heading 1
-## Heading 2
-### Heading 3
-#### Heading 4
-##### Heading 5
-###### Heading 6
+Python的selenium工具提供方便的網頁自動化功能，此篇針對簡易爬蟲的部分記錄。
 
-<hr>
+#### 安裝及Browser Driver
 
-##### Emphasis
+如同Python的其他工具，selenium也能透過pip套件進行安裝，也可以使用Pycharm內的interpreter新增。
 
-Emphasis, aka italics, with *asterisks* or _underscores_.
+由於要使用selenium自動開啟瀏覽器，我們還需要下載對應的最新版browser driver至相應的路徑內。
 
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
+為了避免繁瑣且須持續更新的下載步驟，這邊我們使用[Web Driver Manager](https://pypi.org/project/webdriver-manager/)工具，可以省下不少工作。
 
-Combined emphasis with **asterisks and _underscores_**.
+#### 網頁自動化操作
 
-Strikethrough uses two tildes. ~~Scratch this.~~
+在selenium中，我們可以必須先引入相關的package以及command，詳細可以參考[selenium手冊](https://www.selenium.dev/documentation/en/)，例如:
 
-<hr>
-
-##### Link
-[I'm an inline-style link](https://www.google.com)
-
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
-
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
-
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
-
-[You can use numbers for reference-style link definitions][1]
-
-Or leave it empty and use the [link text itself].
-
-URLs and URLs in angle brackets will automatically get turned into links. 
-http://www.example.com or <http://www.example.com> and sometimes 
-example.com (but not on Github, for example).
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
-
-<hr>
-
-##### Paragraph
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus, facilis placeat pariatur! Voluptatem, sed harum pariatur adipisci voluptates voluptatum cumque, porro sint minima similique magni perferendis fuga! Optio vel ipsum excepturi tempore reiciendis id quidem? Vel in, doloribus debitis nesciunt fugit sequi magnam accusantium modi neque quis, vitae velit, pariatur harum autem a! Velit impedit atque maiores animi possimus asperiores natus repellendus excepturi sint architecto eligendi non, omnis nihil. Facilis, doloremque illum. Fugit optio laborum minus debitis natus illo perspiciatis corporis voluptatum rerum laboriosam.
-
-<hr>
-
-##### Ordered List
-
-1. List item
-2. List item
-3. List item
-4. List item
-5. List item
-
-
-##### Unordered List
-
-* List item
-* List item
-* List item
-* List item
-* List item
-
-<hr>
-
-##### Code and Syntax Highlighting
-
-Inline `code` has `back-ticks around` it.
-
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
- 
 ```python
-s = "Python syntax highlighting"
-print s
-```
- 
-```
-No language indicated, so no syntax highlighting. 
-But let's throw in a <b>tag</b>.
+from selenium import webdriver  # webdriver package
+from webdriver_manager.chrome import ChromeDriverManager  # wdm package
 ```
 
-<hr>
+接下來我們可以嘗試以下指令跳轉頁面:
 
-##### Blockquote
+```python
+# 使用.wdm指定driver位置
+driver = webdriver.Chrome(ChromeDriverManager().install())  # 將webdriver設至變數driver
 
-> This is a blockquote example.
+# 若未安裝wdm，也可以使用以下指令
+# driver = webdriver.Chrome(executable_path="C:\\browser_drivers\\chromedriver.exe")
 
-<hr>
+driver.maximize_window()  # 最大化視窗
+driver.get("url1")  # 開啟指定url1
+driver.get("url2")  # 跳轉至url2
+driver.back()  # 回到上一頁(url1)
+driver.forward()  # 回到下一頁(url2)
 
-##### Inline HTML
+driver.close  # 關閉瀏覽器
+```
 
-You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
+我們也可以試著進行其他網頁操作，如點擊特定選項、輸入字元等，這裡以爬取Dcard上文章為例:
 
-<dl>
-  <dt>Definition list</dt>
-  <dd>Is something people use sometimes.</dd>
+```python
+from selenium import webdriver  # webdriver package
+from selenium.webdriver.common.keys import Keys
+from webdriver_manager.chrome import ChromeDriverManager  # drivermanager package
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait  # 引入網頁讀取條件套件
+from selenium.webdriver.support import expected_conditions as EC
+import time
 
-  <dt>Markdown in HTML</dt>
-  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
-</dl>
+driver = webdriver.Chrome(ChromeDriverManager().install()
+driver.maximize_window()
+driver.get("https://www.dcard.tw/f")
 
+#於搜尋欄輸入文字
+search = driver.find_element_by_name("query")
+search.clear()  # 清空輸入欄位
+search.send_keys("python")  # 輸入文字
+search.send_keys(Keys.RETURN)  # enter
 
-<hr>
+# 等待看板顯示後再開始取title
+WebDriverWait(driver, 10).until(
+    EC.presence_of_element_located((By.CLASS_NAME, ""))  # 選定條件有關之element
+)
 
-##### Tables
+# 將標題放入titles list
+titles = driver.find_elements_by_class_name("")  # 填入標題檔之element
 
-Colons can be used to align columns.
+# 寫出標題
+for title in titles:
+    print(title.text)
+time.sleep(5)
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+# 點擊特定標籤
+link = driver.find_element_by_link_text("")  #選定特定title  
+link.click()
 
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the 
-raw Markdown line up prettily. You can also use inline Markdown.
+time.sleep(5)
+driver.close()  # 關閉視窗
+```
 
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
+如上述，我們可以將特定頁面的標題寫至list，也可以點擊任一文章進行跳轉。
 
-<hr>
+除此之外，我們也可以透過選定特定element進行操作，詳見[selenium手冊](https://www.selenium.dev/documentation/en/support_packages/working_with_select_elements/)
 
-##### Image
+#### 總結
 
-![image](../../images/post/post-1.jpg)
-
-<hr>
-
-##### Youtube video
-
-{{< youtube C0DPdy98e4c >}}
+selenium提供了許多方便的功能讓網頁能自動化的操作，可以協助我們減少日常繁瑣的工作，對QA而言更是十分重要的工具，後續我會繼續更新selenium於測試上的相關應用。

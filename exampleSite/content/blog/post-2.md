@@ -67,7 +67,7 @@ class views:
 
 即是在models中的py檔進行撰寫，並注意數值及參數地傳出及傳入。
 
-此篇不詳加介紹，若讀者有興趣，可以參考我的github上關於此次刻成的[實作](https://github.com/mike504110403/flask_demo_git)。
+此篇不詳加介紹，若讀者有興趣，可以參考我的github上關於此次課程的[實作](https://github.com/mike504110403/flask_demo_git)。
 
 
 #### **總結:**
