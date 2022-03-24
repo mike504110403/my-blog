@@ -15,6 +15,7 @@ categories:
 tags:
   - "Web Frame"
   - "GitHub page"
+  - "Hugo"
 
 # post type
 type: "post"

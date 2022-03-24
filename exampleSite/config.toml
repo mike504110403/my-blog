@@ -79,7 +79,7 @@ disqusShortname = "post-commit"  # 評論功能
   #[[menu.footer]]
   #name = "Contact"
   #URL = "contact"
-  #weight = 3
+  #weight = 1
 
 
 #################### default parameters ################################

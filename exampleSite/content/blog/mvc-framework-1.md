@@ -10,10 +10,10 @@ draft: false  # 是否為草稿?
 description: "紀錄python的flask套件及MVC框架概念的學習"
 
 # taxonomies
-categories: 
+categories:  # 分類只能一個
   - "Experience sharing"
   
-tags:
+tags:  # 標籤可以多個
   - "Web Frame"
   - "Flask"
   - "Python"
