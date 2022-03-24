@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 30 Jul 2021 15:46:47 +0800</lastBuildDate><atom:link href="https://mike504110403.github.io/tags/selenium/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>python selenium 設置及基本指令</title>
-      <link>https://mike504110403.github.io/blog/post-3/</link>
+      <link>https://mike504110403.github.io/blog/python-selenium/</link>
       <pubDate>Fri, 30 Jul 2021 15:46:47 +0800</pubDate>
       
-      <guid>https://mike504110403.github.io/blog/post-3/</guid>
+      <guid>https://mike504110403.github.io/blog/python-selenium/</guid>
       <description>Python的selenium工具提供方便的網頁自動化功能，此篇針對簡易爬蟲的部分記錄。
 安裝及Browser Driver 如同Python的其他工具，selenium也能透過pip套件進行安裝，也可以使用Pycharm內的interpreter新增。
 由於要使用selenium自動開啟瀏覽器，我們還需要下載對應的最新版browser driver至相應的路徑內。

@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="A-Ze&#39;s experience sharing.">
+  <meta name="description" content="紀錄python的flask套件及MVC框架概念的學習">
   <meta name="author" content="A-Ze">
   <meta name="generator" content="Hugo 0.86.0" />
 
@@ -116,134 +116,82 @@
 </header>
 <!-- /navigation -->
 
-
 <section class="section-sm">
   <div class="container">
     <div class="row">
-            
-            <div class="col-lg-4">
-  <div class="widgets">
-    
-    <div class="widget">
-      
-      <h4 class="widget-title">About Me</h4>
-      
-      <img src="https://mike504110403.github.io/images/me.jpg" alt=""
-        class="img-fluid author-thumb-sm d-block mx-auto rounded-circle mb-4">
-      
-      <p>軟體工程師路上的無為青年</p>
-      <a href="https://mike504110403.github.io/about/" class="btn btn-outline-primary">More</a>
-      
-    </div>
-    
-    <div class="widget">
-      <h4 class="widget-title">Category</h4>
-      <ul class="list-unstyled">
-        <li><a
-            href="/categories/experience-sharing">Experience sharing</a>
-        </li>
-      </ul>
-    </div>
-    
-    <div class="widget">
-      <h4 class="widget-title">Tag</h4>
-      <ul class="list-inline">
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/flask">Flask</a></li>
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/github-page">Github page</a></li>
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/hugo">Hugo</a></li>
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/python">Python</a></li>
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/selenium">Selenium</a></li>
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/web-automation">Web automation</a></li>
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/web-frame">Web frame</a></li>
-      </ul>
-    </div>
-    
-    <div class="widget">
-      <h4 class="widget-title">Social</h4>
-      <ul class="list-inline social-links">
-        
-        <li class="list-inline-item"><a href="https://www.instagram.com/az06_6/"><i class="ti-instagram"></i></a></li>
-        
-        <li class="list-inline-item"><a href="https://github.com/mike504110403"><i class="ti-github"></i></a></li>
-        
-      </ul>
-    </div>
-    
-
-    
-
-    
-  </div>
-</div>
-
-            
-      <div class="col-lg-8 mb-5 mb-lg-0">
-        <div class="row">
-          
-          
-          <div class="col-md-6 mb-4">
-    <article class="card">
-        
-        <div class="card-body px-0">
+      <div class="col-lg-12 mx-auto">
         
         <a href="/categories/experience-sharing"
-            class="text-primary">Experience sharing</a>
+          class="text-primary">Experience sharing</a>
         
-        <a href="https://mike504110403.github.io/blog/python-selenium/" class="h5 d-block my-3">python selenium 設置及基本指令</a>
+        <h2>MVC網頁框架&ndash;利用Flask具功能的微型網頁</h2>
         <div class="mb-3 post-meta">
-            <span>By A-Ze</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>2021-07-30</span>
-            
-        </div>
-        <p class="card-text">使用selenium進行簡單自動化-爬蟲篇</p>
-        <a href="https://mike504110403.github.io/blog/python-selenium/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
+          <span>By A-Ze</span>
           
-          <div class="col-md-6 mb-4">
-    <article class="card">
-        
-        <div class="card-body px-0">
-        
-        <a href="/categories/experience-sharing"
-            class="text-primary">Experience sharing</a>
-        
-        <a href="https://mike504110403.github.io/blog/mvc-framework-1/" class="h5 d-block my-3">MVC網頁框架&ndash;利用Flask具功能的微型網頁</a>
-        <div class="mb-3 post-meta">
-            <span>By A-Ze</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>2021-07-28</span>
-            
-        </div>
-        <p class="card-text">紀錄python的flask套件及MVC框架概念的學習</p>
-        <a href="https://mike504110403.github.io/blog/mvc-framework-1/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>28 July 2021</span>
           
         </div>
-      </div>
-
-
-      
-      <div class="col-12 mt-5">
         
+        <div class="content mb-5">
+          <p>此篇文章為線上課程<a href="https://hiskio.com/courses/373/about">Django + Flask 雙框架實戰</a>的Flask部分實作心得。</p>
+<p>Flask為Python的網頁框架，能夠連結資料庫快速建立靜態網頁。</p>
+<p>所謂&quot;MVC&quot;即為: Model、Views、Controller，將網頁的不同階段整合並分類於不同的檔案及資料夾，因此更方便於協作及管理。</p>
+<h4 id="以下為mvc架構的概念"><strong>以下為MVC架構的概念:</strong></h4>
+<ul>
+<li>Model &ndash; 負責與資料庫溝通</li>
+<li>View &ndash; 處理有關顯示的部分</li>
+<li>Controller &ndash; 邏輯處理(路由、顯示、計算)</li>
+</ul>
+<h4 id="實作上的基本流程如下"><strong>實作上的基本流程如下:</strong></h4>
+<p>照官方說明安裝<a href="https://flask.palletsprojects.com/en/2.0.x/installation/">Flask</a>後，建立虛擬環境並建立MVC對應資料夾，如圖:</p>
+<p><img src="/images/flask1.jpg" alt=""></p>
+<p>&ldquo;App&quot;指的是應用程式，指的是此次架的Flask網頁，其下有&quot;models&quot;用於存放與功能模塊的py檔，&ldquo;views&quot;存放的為控制如何顯示的py檔，而&quot;templates&quot;存放views所顯示的所有網頁之html檔。</p>
+<p>其中，router.py為此App的Controller，主導邏輯處理。</p>
+<p>我們首先須於router.py中定義路由吉所使用的http協定，並傳至處理顯示的views資料夾中</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#888;font-style:italic"># index page</span>
+<span style="color:#000">@app</span>.<span style="color:#000">route</span>(<span style="color:#5a2">&#39;/&#39;</span>, <span style="color:#000">methods</span>=[<span style="color:#5a2">&#39;GET&#39;</span>])  <span style="color:#888;font-style:italic"># 使用裝飾器定義路由</span>
+<span style="color:#00f">def</span> <span style="color:#000">index</span>():
+    <span style="color:#00f">return</span> <span style="color:#000">views</span>.<span style="color:#000">index</span>()  <span style="color:#888;font-style:italic"># view去顯示根目錄(於views/user.py內撰寫</span>
+</code></pre></div><p>再由views內的function決定如何顯示，這邊我們使用 flask所導入的<code>render_template</code>指令使<code>views.index()</code>顯示index.html。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#888;font-style:italic"># Render the index page</span>
+<span style="color:#00f">class</span> <span style="color:#000">views</span>:
+    <span style="color:#00f">def</span> <span style="color:#000">index</span>():
+        <span style="color:#00f">return</span> <span style="color:#000">render_template</span>(<span style="color:#5a2">&#39;users/index.html&#39;</span>)  <span style="color:#888;font-style:italic"># 將template 內的index.html 渲染出來</span>
+</code></pre></div><p>以上便是flask網頁框架的基本概念，而功能模塊的部分(如資料庫連結、網頁跳轉)等。</p>
+<p>即是在models中的py檔進行撰寫，並注意數值及參數地傳出及傳入。</p>
+<p>此篇不詳加介紹，若讀者有興趣，可以參考我的github上關於此次課程的<a href="https://github.com/mike504110403/flask_demo_git">實作</a>。</p>
+<h4 id="總結"><strong>總結:</strong></h4>
+<p>flask提供了許多套件簡化了網頁的開發，MVC框架亦讓協作開發的分工與管理更加容易。</p>
+<p>對於要開發簡單功能的靜態網頁而言，實為一個方便的工具，若之後繼續深入摸索，我會再新增文章詳細介紹flask有關的套件。</p>
+
+        </div>
+
+        
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "post-commit" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
       </div>
     </div>
   </div>
 </section>
-
 
 
 
